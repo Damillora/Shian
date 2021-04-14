@@ -11,10 +11,6 @@
     &__background {
         width: 100%;
         height: 100%;
-        @include bg-283-yuika;
-        &--yuriko {
-            @include bg-765-yuriko;
-        }
     }
     &__overlay {
         width: 100%;

@@ -17,13 +17,9 @@
         height: 100vh;
         position: absolute;
         @include transition;
-        @include bg-283-yuika;
 
         opacity: 0%;
         top: -23vh;
-        &--yuriko {
-            @include bg-765-yuriko;
-        }
         &--enabled {
             opacity: 100%;
             top: 0;
