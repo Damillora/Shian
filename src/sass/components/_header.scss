@@ -26,8 +26,7 @@
         }
     }
     &__overlay {
-        opacity: 50%;
-        background-color: $black;
+        background-color: rgba(0,0,0,0.5);
     }
 
     &__inner {
