@@ -56,13 +56,13 @@
     width: 1rem;
   }
   &__tag-name {
-    font-size: $text-xs;
+    font-size: $text-sm;
     &:hover {
       text-decoration: underline;
     }
   }
   &__paywall {
-    font-size: $text-xs;
+    font-size: $text-sm;
     &:hover {
       text-decoration: underline;
     }
