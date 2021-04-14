@@ -73,7 +73,7 @@
     @include transition;
     color: var(--accent-color);
     font-size: $text-xl;
-    font-weight: lighter;
+    font-weight: 300;
 
     @include screen(md) {
       font-size: $text-2xl;

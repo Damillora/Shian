@@ -14,7 +14,7 @@ function serve(done) {
 
 function css () {
 
-  return src('src/sass/app.scss')
+  return src('src/sass/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(cleancss({compatibility: 'ie8'}))
     .pipe(dest('dist/'))

@@ -26,6 +26,7 @@
 
         p {
             @include my(0.25rem);
+            white-space: nowrap;
             text-align: right;
         }
         flex-shrink: 1;
