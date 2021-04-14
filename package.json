@@ -1,7 +1,7 @@
 {
     "name": "@damillora/shian",
     "description": "Common component library for nanao.moe",
-    "version": "0.2.2",
+    "version": "0.3.0",
     "license": "MIT",
     "author": {
         "email": "developer@damillora.com"

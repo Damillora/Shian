@@ -1,0 +1,84 @@
+.post-navigator {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include screen(md) {
+    flex-direction: row;
+  }
+  a:hover {
+    color: var(--highlight-color);
+    text-decoration: none;
+  }
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    @include transition;
+
+    @include screen(md) {
+      width: 33.3333%;
+    }
+
+    &:hover {
+      background-color: var(--highlight-bg-color);
+      text-decoration: none;
+    }
+    &:hover &__icon {
+      color: var(--highlight-color);
+    }
+    &:hover &__nav-title {
+      color: var(--highlight-color);
+    }
+
+    &--previous-post {
+      justify-content: start;
+
+      @include screen(md) {
+        justify-content: flex-end;
+      }
+    }
+    &--next-post {
+      justify-content: flex-end;
+
+      @include screen(md) {
+        justify-content: start;
+      }
+    }
+  }
+
+  &__icon {
+    // mr-4 text-yuika-blue-700 text-2xl group-hover:text-white
+    margin-right: 1rem;
+    color: var(--accent-color);
+    font-size: $text-2xl;
+  }
+
+  &__nav-content {
+    display: flex;
+    flex-direction: column;
+    p {
+      margin: 0;
+    }
+
+    &--previous-post {
+      align-items: start;
+
+      @include screen(md) {
+        align-items: flex-end;
+      }
+    }
+    &--next-post {
+      align-items: flex-end;
+
+      @include screen(md) {
+        align-items: start;
+      }
+    }
+  }
+  &__nav-title {
+    font-size: $text-xl;
+    color: var(--accent-color);
+  }
+}

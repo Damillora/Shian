@@ -1,0 +1,127 @@
+.post-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  @include transition;
+
+  @include screen(md) {
+    display: flex;
+    flex-direction: row;
+  }
+  &__image {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    @include screen(md) {
+      width: 35vw;
+      min-width: 300px;
+      max-width: 450px;
+    }
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__image::after {
+    display: block;
+    content: '';
+    padding-bottom: 56.25%;
+  }
+  &__info {
+    @include screen(md) {
+      padding-left: 1rem;
+    }
+  }
+  
+  &__tag-row {
+    padding-top: 1rem;
+    @include screen(md) {
+      padding-top: 0;
+    }
+
+    * {
+      display: inline-block;
+      padding-right: 0.25rem;
+    }
+  }
+  &__tag-color {
+    display: inline-block;
+    border-radius: 9999px;
+    vertical-align: text-bottom;
+    height: 1rem;
+    width: 1rem;
+  }
+  &__tag-name {
+    font-size: $text-xs;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__paywall {
+    font-size: $text-xs;
+    &:hover {
+      text-decoration: underline;
+    }
+    color: var(--accent-color);
+  }
+
+  &__title {
+    @include transition;
+    color: var(--accent-color);
+    font-size: $text-xl;
+    font-weight: lighter;
+
+    @include screen(md) {
+      font-size: $text-2xl;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__time {
+    font-size: $text-xs;
+  }
+
+  &__author-list {
+    font-size: $text-xs;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    @include my(0.5rem);
+    @include py(0.5rem);
+  }
+  &__author-images {
+    display: flex;
+    flex-direction: row;
+  }
+  &__author-image {
+    height: 2rem;
+    margin-left: 0.25rem;
+    margin-right: 0.75rem;
+    
+    img {
+      border-radius: 9999px;
+      height: 100%;
+    }
+  }
+  &__author-names {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+  &__excerpt {
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      font-size: $text-sm;
+  }
+}
