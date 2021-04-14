@@ -1,7 +1,7 @@
 {
     "name": "@damillora/shian",
     "description": "Common component library for nanao.moe",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "license": "MIT",
     "author": {
         "email": "developer@damillora.com"
@@ -9,8 +9,7 @@
     "scripts": {
         "build": "gulp build"
     },
-    "dependencies": {
-    },
+    "dependencies": {},
     "devDependencies": {
         "@fullhuman/postcss-purgecss": "^1.3.0",
         "autoprefixer": "^10.2.1",
@@ -26,6 +25,6 @@
         "typeface-exo-2": "^0.0.72"
     },
     "files": [
-      "dist/**"
+        "dist/**"
     ]
 }
