@@ -1,0 +1,122 @@
+
+
+html {
+    font-family: 'Exo 2',-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+:root, [data-theme="light"] {
+    --text-color: #{$text-light};
+    --bg-color: #{$bg-light};
+    --accent-color: #{$accent-light};
+    --accent-bg-color: #{$accent-bg-light};
+    --highlight-color: #{$highlight-light};
+    --highlight-bg-color: #{$highlight-bg-light};
+}
+
+[data-theme="dark"] {
+    --text-color: #{$text-dark};
+    --bg-color: #{$bg-dark};
+    --accent-color: #{$accent-dark};
+    --accent-bg-color: #{$accent-bg-dark};
+    --highlight-color: #{$highlight-dark};
+    --highlight-bg-color: #{$highlight-bg-dark};
+}
+
+@media (prefers-color-schme: dark) {
+    :root:not[data-theme="light"] {
+        --text-color: #{$text-dark};
+        --bg-color: #{$bg-dark};
+        --accent-color: #{$accent-dark};
+        --accent-bg-color: #{$accent-bg-dark};
+        --highlight-color: #{$highlight-dark};
+        --highlight-bg-color: #{$highlight-bg-dark};
+    }
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.main {
+    padding: 1rem;
+    @include screen(md) {
+        @include px(2rem);
+    }
+    @include screen(lg) {
+        @include px(4rem);
+    }
+    @include screen(xl) {
+        @include px(4rem);
+    }
+}
+.page {
+    width: 100%;
+}
+.main {
+    margin-left: auto;
+    margin-right: auto;
+    
+
+    p, h1, h2, h3, h4, h5, h6 {
+        @include my(1rem);
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 300;
+    }
+    h1 {
+        font-size: $text-4xl;
+    }
+    h2 {
+        font-size: $text-3xl;
+    }
+    h3 {
+        font-size: $text-2xl;
+    }
+    h4 {
+        font-size: $text-xl;
+    }
+    h5 {
+        font-size: $text-lg;
+    }
+    h6 {
+        font-size: $text-base;
+    }
+
+    a {
+        color: var(--accent-color);
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    ul {
+        list-style-type: disc;
+        li p {
+            @include my(0rem);
+        }
+    }
+    ol {
+        list-style-type: decimal;
+    }
+    code {
+        background-color: var(--accent-bg-color);
+        color: var(--accent-color);
+        white-space: pre-wrap;
+    }
+    blockquote {
+        border-left: 0.5rem solid var(--accent-color);
+        @include my(2rem);
+        padding: 0.5rem 0 0.5rem 2rem;
+    }
+    pre {
+        background: var(--accent-bg-color);
+        color: var(--accent-color);
+        padding: 0.5rem;
+        border: 1px solid var(--accent-color);
+    }
+}
+
+.card-list {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,24 @@
+.media-item {
+    padding: 0.25rem 1rem;
+    width: 100%;
+    @include transition;
+
+    &:hover {
+        background-color: var(--highlight-bg-color);
+    }
+    
+    &__caption {
+        font-size: $text-2xl;
+        @include my(0.25rem);
+    }
+    
+    &__content {
+        width: 100%;
+        @include my(0.5rem);
+        display: block;
+
+        p {
+            @include my(0.25rem);
+        }
+    }
+}

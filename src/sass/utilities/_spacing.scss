@@ -1,0 +1,35 @@
+@mixin px($size) {
+    padding-left: $size;
+    padding-right: $size;
+}
+
+@mixin py($size) {
+    padding-top: $size;
+    padding-bottom: $size;
+}
+
+@mixin mx($size) {
+    margin-left: $size;
+    margin-right: $size;
+}
+
+@mixin my($size) {
+    margin-top: $size;
+    margin-bottom: $size;
+}
+
+.container {
+    width: 100%;
+    @include screen(sm) {
+        max-width: 640px;
+    }
+    @include screen(md) {
+        max-width: 768px;
+    }
+    @include screen(lg) {
+        max-width: 1024px;
+    }
+    @include screen(xl) {
+        max-width: 1280px;
+    }
+}

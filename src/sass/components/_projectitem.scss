@@ -1,0 +1,25 @@
+.project-item {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    @include transition;
+    min-height: 12rem;
+    
+    &:hover {
+        background-color: var(--highlight-bg-color);
+    }
+
+    &__image {
+        width: 25%;
+        display: flex;
+        flex-direction: col;
+        align-items: center;
+        justify-content: center;
+        margin-right: 2rem;
+    }
+
+    &__text {
+        width: 75%;
+    }
+}
