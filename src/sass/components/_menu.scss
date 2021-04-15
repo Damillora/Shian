@@ -14,9 +14,6 @@
     align-items: center;
     cursor: pointer;
     @include transition;
-    @include screen(md) {
-        height: 4rem;
-    }
     
     &:hover {
       background-color: $theme-blue;
