@@ -50,7 +50,11 @@
     display: flex;
     flex-direction: column;
     @include transition;
-    height: 100%;
+    height: 3rem;
+    @include screen(md) {
+        height: 4rem;
+    }
+
     &__top {
         display: flex;
         flex-direction: row;
