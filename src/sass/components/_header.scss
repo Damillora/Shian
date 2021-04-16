@@ -1,122 +1,121 @@
-
 .site-header {
-    position: fixed;
-    z-index: 10;
-    height: 3rem;
-    width: 100%;
-    overflow: hidden;
+  position: fixed;
+  z-index: 10;
+  height: 3rem;
+  width: 100%;
+  overflow: hidden;
+  @include transition;
+  &.enabled {
+    height: 100vh;
+  }
+  @include screen(md) {
+    height: 4rem;
+  }
+
+  &__background {
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
     @include transition;
-    &.enabled {
-        height: 100vh;
-    }
-    @include screen(md) {
-        height: 4rem;
-    }
 
-    &__background {
-        z-index: -1;
-        width: 100vw;
-        height: 100vh;
-        position: absolute;
-        @include transition;
+    opacity: 0%;
+    top: -23vh;
+    &--enabled {
+      opacity: 100%;
+      top: 0;
+    }
+  }
+  &__overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 
-        opacity: 0%;
-        top: -23vh;
-        &--enabled {
-            opacity: 100%;
-            top: 0;
-        }
-    }
-    &__overlay {
-        background-color: rgba(0,0,0,0.5);
-    }
+  &__inner {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    @include transition;
+  }
 
-    &__inner {
-        z-index: 1;
-        width: 100%;
-        height: 100%;
-        @include transition;
-    }
-
-    &.enabled &__inner {
-       background: rgba(0,0,0,0.5);
-    }
-    &.detached &__inner {
-       background: rgba(0,0,0,0.5);
-    }
+  &.enabled &__inner {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  &.detached &__inner {
+    background: rgba(0, 0, 0, 0.5);
+  }
 }
 
 .header {
+  display: flex;
+  flex-direction: column;
+  @include transition;
+  height: 100%;
+
+  &__top {
     display: flex;
-    flex-direction: column;
-    @include transition;
+    flex-direction: row;
     height: 3rem;
     @include screen(md) {
-        height: 4rem;
+      height: 4rem;
     }
+  }
 
-    &__top {
-        display: flex;
-        flex-direction: row;
-        height: 100%;
+  &__title {
+    flex-grow: 1;
+    @include transition;
+    a {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      @include py(0.5rem);
+      @include screen(md) {
+        @include py(1rem);
+      }
+      color: $white;
+      font-size: $text-lg;
+      padding-left: 1rem;
+      height: 100%;
     }
+    &:hover {
+      background-color: $theme-blue;
+    }
+  }
 
-    &__title {
-        flex-grow: 1;
-        @include transition;
-        a {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            @include py(0.5rem);
-            @include screen(md) {
-                @include py(1rem);
-            }
-            color: $white;
-            font-size: $text-lg;
-            padding-left: 1rem;
-            height: 100%;
-        }
-        &:hover {
-            background-color: $theme-blue;
-        }
+  &__nav-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    padding: 0.5rem;
+    @include screen(md) {
+      @include py(1rem);
     }
-
-    &__nav-button {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        height: 100%;
-        position: relative;
-        cursor: pointer;
-        padding: 0.5rem;
-        @include screen(md) {
-            @include py(1rem);
-        }
-        text-align: center;
-        white-space: nowrap;
-        @include transition;
-        &:hover {
-            background-color: $theme-blue;
-        }
-        p {
-            color: $white;
-            margin-right: 0.5rem;
-            display: none;
-            @include screen(md) {
-                display: block;
-            }
-        }
+    text-align: center;
+    white-space: nowrap;
+    @include transition;
+    &:hover {
+      background-color: $theme-blue;
     }
-    &__icon {
-        width: 3rem;
-        color: $white;
-        display: inline-block;
-        @include px(0.50rem);
-        vertical-align: middle;
-        // @include py(0.25rem);
-        // @include screen(md) {
-        //     @include py(0.75rem);
-        // }
+    p {
+      color: $white;
+      margin-right: 0.5rem;
+      display: none;
+      @include screen(md) {
+        display: block;
+      }
     }
+  }
+  &__icon {
+    width: 3rem;
+    color: $white;
+    display: inline-block;
+    @include px(0.5rem);
+    vertical-align: middle;
+    // @include py(0.25rem);
+    // @include screen(md) {
+    //     @include py(0.75rem);
+    // }
+  }
 }
