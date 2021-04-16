@@ -49,7 +49,6 @@
   display: flex;
   flex-direction: column;
   @include transition;
-  height: 100%;
 
   &__top {
     display: flex;
@@ -88,12 +87,9 @@
     height: 100%;
     position: relative;
     cursor: pointer;
-    padding: 0.5rem;
-    @include screen(md) {
-      @include py(1rem);
-    }
     text-align: center;
     white-space: nowrap;
+    
     @include transition;
     &:hover {
       background-color: $theme-blue;
