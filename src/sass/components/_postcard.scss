@@ -42,26 +42,24 @@
     @include screen(md) {
       padding-top: 0;
     }
-
-    * {
-      display: inline-block;
-      padding-right: 0.25rem;
-    }
   }
   &__tag-color {
     display: inline-block;
+    padding-right: 0.25rem;
     border-radius: 9999px;
     vertical-align: text-bottom;
     height: 1rem;
     width: 1rem;
   }
   &__tag-name {
+    display: inline-block;
+    padding-right: 0.25rem;
     font-size: $text-sm;
-    &:hover {
-      text-decoration: underline;
-    }
+    color: var(--text-color);
   }
   &__paywall {
+    display: inline-block;
+    padding-right: 0.25rem;
     font-size: $text-sm;
     &:hover {
       text-decoration: underline;
@@ -113,6 +111,9 @@
     flex-direction: column;
     flex-grow: 1;
     justify-content: center;
+  }
+  &__author-name {
+    color: var(--text-color);
   }
   &__excerpt {
     margin-top: 0.5rem;
