@@ -60,23 +60,22 @@
   }
 
   &__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @include py(0.5rem);
+    @include screen(md) {
+      @include py(1rem);
+    }
+    color: $white;
+    font-size: $text-lg;
+    padding-left: 1rem;
+    height: 100%;
     flex-grow: 1;
     @include transition;
-    a {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      @include py(0.5rem);
-      @include screen(md) {
-        @include py(1rem);
-      }
-      color: $white;
-      font-size: $text-lg;
-      padding-left: 1rem;
-      height: 100%;
-    }
     &:hover {
       background-color: $theme-blue;
+      text-decoration: none;
     }
   }
 
@@ -89,18 +88,18 @@
     cursor: pointer;
     text-align: center;
     white-space: nowrap;
-    
+
     @include transition;
     &:hover {
       background-color: $theme-blue;
     }
-    p {
-      color: $white;
-      margin-right: 0.5rem;
-      display: none;
-      @include screen(md) {
-        display: block;
-      }
+  }
+  &__nav-button-text {
+    color: $white;
+    margin-right: 0.5rem;
+    display: none;
+    @include screen(md) {
+      display: block;
     }
   }
   &__icon {

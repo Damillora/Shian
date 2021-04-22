@@ -1,65 +1,43 @@
 .post-header {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
+  &__heading {
     @include my(0.5rem);
+
+    &--tag {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    &--tag-text {
+      margin-left: 0.5rem;
+      color: $white;
+    }
+    &--tag-color {
+      display: inline-block;
+      border-radius: 9999px;
+      vertical-align: text-bottom;
+      height: 4rem;
+      width: 4rem;
+    }
   }
   &__tag-row {
     padding-top: 1rem;
     @include screen(md) {
       padding-top: 0;
     }
-
-    * {
-      display: inline-block;
-      padding-right: 0.25rem;
-    }
   }
-
-  &__tag-heading {
-    display: flex;
-    flex-direction: row;
-    h1 {
-        margin-left: 0.5rem;
-    }
-  }
-  &__tag-heading-color {
+  &__tag-info {
     display: inline-block;
-    border-radius: 9999px;
-    vertical-align: text-bottom;
-    height: 4rem;
-    width: 4rem;
-  }
-
-  &__tag-color {
-    display: inline-block;
-    border-radius: 9999px;
-    vertical-align: text-bottom;
-    height: 1rem;
-    width: 1rem;
-  }
-  &__tag-name {
-    font-size: $text-base;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-  &__paywall {
-    font-size: $text-base;
-    &:hover {
-      text-decoration: underline;
-    }
-    color: var(--accent-color);
+    padding-right: 0.25rem;
   }
 
   &__time {
     font-size: $text-sm;
+    @include my(0.5rem);
   }
-
+  &__title {
+    color: $white;
+    @include my(0.5rem);
+  }
   &__author-list {
     font-size: $text-sm;
     display: flex;
@@ -71,25 +49,21 @@
   &__author-images {
     display: flex;
     flex-direction: row;
-  }
-  &__author-image {
-    height: 2rem;
+    align-items: center;
     margin-left: 0.25rem;
     margin-right: 0.75rem;
-
-    img {
-      border-radius: 9999px;
-      height: 100%;
-    }
+  }
+  &__author-image {
+    border-radius: 9999px;
+    height: 2rem;
   }
   &__author-names {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     justify-content: center;
-
-    a:hover {
-      text-decoration: underline;
-    }
+  }
+  &__author-name {
+    color: $white;
   }
 }

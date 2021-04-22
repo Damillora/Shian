@@ -10,6 +10,13 @@
   display: flex;
   align-items: flex-end;
 
+  &__heading {
+    color: $white;
+    @include my(0.5rem);
+  }
+  &__text {
+    @include my(0.5rem);
+  }
   &__background {
     position: absolute;
     top: 0;
@@ -34,15 +41,6 @@
       padding-top: 4rem;
     }
     color: $white;
-    a,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      color: $white;
-    }
   }
 
   &__icon {

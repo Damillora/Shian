@@ -58,9 +58,6 @@
   &__nav-content {
     display: flex;
     flex-direction: column;
-    p {
-      margin: 0;
-    }
 
     &--previous-post {
       align-items: start;
@@ -77,7 +74,11 @@
       }
     }
   }
+  &__nav-indicator {
+    margin: 0;
+  }
   &__nav-title {
+    margin: 0;
     font-size: $text-xl;
     color: var(--accent-color);
   }

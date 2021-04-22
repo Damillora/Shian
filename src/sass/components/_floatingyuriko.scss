@@ -1,12 +1,12 @@
 .floating-yuriko {
-    position: fixed;
-    right: 1rem;
-    bottom: 1rem;
-    margin-bottom: 0px;
-    cursor: pointer;
-    img {
-        height: 20vh;
-    }
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  margin-bottom: 0px;
+  cursor: pointer;
+  &__image {
+    height: 20vh;
+  }
 }
 
 .hvr-float {
@@ -22,7 +22,9 @@
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-.hvr-float:hover, .hvr-float:focus, .hvr-float:active {
+.hvr-float:hover,
+.hvr-float:focus,
+.hvr-float:active {
   -webkit-transform: translateY(-8px);
   transform: translateY(-8px);
 }

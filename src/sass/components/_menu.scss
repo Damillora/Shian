@@ -14,32 +14,33 @@
     align-items: center;
     cursor: pointer;
     @include transition;
-    
+
     &:hover {
       background-color: $theme-blue;
     }
+  }
 
-    a {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      width: 100%;
-      height: 100%;
-    }
-    i {
-      display: inline-block;
-      width: 4rem;
-      height: 3rem;
-      color: $white;
-      text-align: center;
-      @include px(0.5rem);
-      @include py(0.75rem);
-    }
-    p {
-      display: inline-block;
-      flex-grow: 1;
-      @include px(1rem);
-    }
+  &__link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  &__icon {
+    display: inline-block;
+    width: 4rem;
+    height: 3rem;
+    color: $white;
+    text-align: center;
+    @include px(0.5rem);
+    @include py(0.75rem);
+  }
+  &__text {
+    display: inline-block;
+    flex-grow: 1;
+    color: $white;
+    @include px(1rem);
   }
   &__separator {
     margin-left: 5rem;

@@ -58,75 +58,74 @@ body {
 .main {
   margin-left: auto;
   margin-right: auto;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include my(1rem);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+  color: var(--accent-color);
+}
+h1 {
+  font-size: $text-4xl;
+}
+h2 {
+  font-size: $text-3xl;
+}
+h3 {
+  font-size: $text-2xl;
+}
+h4 {
+  font-size: $text-xl;
+}
+h5 {
+  font-size: $text-lg;
+}
+h6 {
+  font-size: $text-base;
+}
 
-  p,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @include my(1rem);
+a {
+  color: var(--accent-color);
+  &:hover {
+    text-decoration: underline;
   }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-weight: 300;
-    color: var(--accent-color);
+}
+ul {
+  list-style-type: disc;
+  li p {
+    @include my(0rem);
   }
-  h1 {
-    font-size: $text-4xl;
-  }
-  h2 {
-    font-size: $text-3xl;
-  }
-  h3 {
-    font-size: $text-2xl;
-  }
-  h4 {
-    font-size: $text-xl;
-  }
-  h5 {
-    font-size: $text-lg;
-  }
-  h6 {
-    font-size: $text-base;
-  }
-
-  a {
-    color: var(--accent-color);
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-  ul {
-    list-style-type: disc;
-    li p {
-      @include my(0rem);
-    }
-  }
-  ol {
-    list-style-type: decimal;
-  }
-  code {
-    background-color: var(--accent-bg-color);
-    color: var(--accent-color);
-    white-space: pre-wrap;
-  }
-  blockquote {
-    border-left: 0.5rem solid var(--accent-color);
-    @include my(2rem);
-    padding: 0.5rem 0 0.5rem 2rem;
-  }
-  pre {
-    background: var(--accent-bg-color);
-    color: var(--accent-color);
-    padding: 0.5rem;
-    border: 1px solid var(--accent-color);
-  }
+}
+ol {
+  list-style-type: decimal;
+}
+code {
+  background-color: var(--accent-bg-color);
+  color: var(--accent-color);
+  white-space: pre-wrap;
+}
+blockquote {
+  border-left: 0.5rem solid var(--accent-color);
+  @include my(2rem);
+  padding: 0.5rem 0 0.5rem 2rem;
+}
+pre {
+  background: var(--accent-bg-color);
+  color: var(--accent-color);
+  padding: 0.5rem;
+  border: 1px solid var(--accent-color);
 }
 
 .card-list {
