@@ -1,6 +1,7 @@
 .menu {
   max-height: 0px;
-  display: block;
+  display: flex;
+  flex-direction: column;
   @include transition;
   overflow: hidden;
   &.enabled {
@@ -17,6 +18,12 @@
 
     &:hover {
       background-color: $theme-blue;
+    }
+
+    &--hidden {
+      max-height: 0;
+      overflow: hidden;
+      @include transition;
     }
   }
 
@@ -42,9 +49,49 @@
     color: $white;
     @include px(1rem);
   }
+
   &__separator {
     margin-left: 5rem;
     margin-right: 4rem;
     border-top: 0.125rem solid $white;
+  }
+
+  &__search-input {
+    display: inline-block;
+    flex-grow: 1;
+    color: $white;
+    @include px(0.5rem);
+    @include mx(0.5rem);
+    @include py(0.25rem);
+    appearance: none;
+    background-color: transparent;
+    outline: none;
+    border-bottom: 1px solid $white;
+    &:focus-visible {
+      outline: none;
+      border-bottom: 1px solid $white;
+    }
+  }
+  &__search-results {
+    flex-grow: 1;
+    overflow-y: scroll;
+  }
+  &__search-result {
+    color: $white;
+    display: block;
+    align-items: center;
+    @include px(2rem);
+    @include py(1rem);
+    @include transition;
+
+    &:hover {
+      background-color: $theme-blue;
+    }
+  }
+  &__search-title {
+    color: $white;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
