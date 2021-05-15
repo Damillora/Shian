@@ -35,6 +35,8 @@
     "url": "https://github.com/Damillora/Shian.git"
   },
   "release": {
-    "branches": ["main"]
+    "branches": [
+      "main"
+    ]
   }
 }

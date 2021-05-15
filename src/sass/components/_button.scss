@@ -1,0 +1,12 @@
+.button {
+  border: solid 2px var(--accent-color);
+  background: var(--accent-color);
+  color: var(--accent-bg-color);
+  padding: 0.25rem 1rem;
+  font-size: 1.125rem;
+  @include transition;
+}
+.button:hover {
+  background: var(--highlight-bg-color);
+  color: var(--highlight-color);
+}
