@@ -1,6 +1,6 @@
 const {series, watch, src, dest, parallel} = require('gulp');
 
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const livereload = require('gulp-livereload');
 const zip = require('gulp-zip');
 const concat = require('gulp-concat');

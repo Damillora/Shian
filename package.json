@@ -11,7 +11,9 @@
     "dev": "gulp dev",
     "semantic-release": "semantic-release"
   },
-  "dependencies": {},
+  "dependencies": {
+    "sass": "^1.35.1"
+  },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^1.3.0",
     "autoprefixer": "^10.2.1",
@@ -20,12 +22,12 @@
     "gulp-concat": "^2.6.1",
     "gulp-livereload": "^4.0.2",
     "gulp-postcss": "^9.0.0",
-    "gulp-sass": "^4.1.0",
+    "gulp-sass": "5",
     "gulp-uglify": "^3.0.2",
     "gulp-zip": "^5.0.1",
     "postcss": "^8.2.3",
-    "typeface-exo-2": "^0.0.72",
-    "semantic-release": "^17.4.2"
+    "semantic-release": "^17.4.2",
+    "typeface-exo-2": "^0.0.72"
   },
   "files": [
     "dist/**"
