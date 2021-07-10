@@ -37,16 +37,19 @@
   &__nav-main {
     display: flex;
     flex-direction: column;
+    height: 100%;
+    overflow-y: hidden;
+    @include transition;
 
     @include screen(md) {
       flex-direction: row;
     }
 
     &.hidden {
-      display: none;
+      height: 0;
 
       @include screen(md) {
-        display: flex;
+        height: 100%;
       }
     }
   }

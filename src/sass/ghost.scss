@@ -132,11 +132,15 @@
   }
 }
 
-#darkMode {
-  .menu__text {
-    display: block;
-    @include screen(md) {
-      display: none;
-    }
+.site-header {
+  &.search-enabled {
+    height: 100%;
+  }
+
+  &.search-enabled &__inner {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  &.search-detached &__inner {
+    background: rgba(0, 0, 0, 0.5);
   }
 }
