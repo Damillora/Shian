@@ -1,11 +1,48 @@
 .menu {
-  max-height: 0px;
   display: flex;
   flex-direction: column;
   @include transition;
-  overflow: hidden;
-  &.enabled {
-    max-height: 100vh;
+
+  @include screen(md) {
+    flex-direction: row;
+  }
+
+  // Dark mode special menu
+  &--dark-mode {
+    .menu__text {
+      display: block;
+      @include screen(md) {
+        display: none;
+      }
+    }
+    .menu__icon {
+      display: inline-block;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+
+    @include screen(md) {
+      flex-direction: row;
+    }
+  }
+  &__nav-main {
+    display: flex;
+    flex-direction: column;
+
+    @include screen(md) {
+      flex-direction: row;
+    }
+
+    &.hidden {
+      display: none;
+
+      @include screen(md) {
+        display: flex;
+      }
+    }
   }
   &__item {
     color: $white;
@@ -15,6 +52,10 @@
     align-items: center;
     cursor: pointer;
     @include transition;
+
+    @include screen(md) {
+      height: 4rem;
+    }
 
     &:hover {
       background-color: $theme-blue;
@@ -42,6 +83,10 @@
     text-align: center;
     @include px(0.5rem);
     @include py(0.75rem);
+    
+    @include screen(md) {
+      display: none;
+    }
   }
   &__text {
     display: inline-block;

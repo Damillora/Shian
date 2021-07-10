@@ -34,6 +34,8 @@
     z-index: 1;
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
     @include transition;
   }
 
@@ -48,12 +50,16 @@
 .header {
   display: flex;
   flex-direction: column;
-  height: 100%;
   @include transition;
 
+  @include screen(md) {
+    height: 4rem;
+    flex-direction: row;
+  }
   &__top {
     display: flex;
     flex-direction: row;
+    flex-grow: 1;
     height: 3rem;
     @include screen(md) {
       height: 4rem;
@@ -89,8 +95,10 @@
     cursor: pointer;
     text-align: center;
     white-space: nowrap;
-
     @include transition;
+    @include screen(md) {
+      display: none; 
+    }
     &:hover {
       background-color: $theme-blue;
     }

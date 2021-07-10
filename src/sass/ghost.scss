@@ -131,3 +131,12 @@
     white-space: nowrap;
   }
 }
+
+#darkMode {
+  .menu__text {
+    display: block;
+    @include screen(md) {
+      display: none;
+    }
+  }
+}
