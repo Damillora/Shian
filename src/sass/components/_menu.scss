@@ -20,6 +20,12 @@
     }
   }
 
+  &--permanent-icon {
+    .menu__icon {
+      display: inline-block;
+    }
+  }
+
   &__nav {
     display: flex;
     flex-direction: column;
