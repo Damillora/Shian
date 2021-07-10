@@ -38,7 +38,9 @@ body {
 }
 
 .main {
-  padding: 1rem;
+  margin: 1rem;
+  @include px(1rem);
+  
   @include screen(sm) {
     @include px(2rem);
   }

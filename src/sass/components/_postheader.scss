@@ -1,7 +1,7 @@
 .post-header {
   width: 100%;
-  padding-top: 3rem;
-  padding-bottom: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
 
   &__heading {
     @include my(0.5rem);
@@ -109,6 +109,7 @@
       position: absolute;
       bottom: 1rem;
       box-shadow: 0px 0px 4px 1px var(--accent-color);
+      z-index: 120;
       @include transition;
   
       @include screen(md) {
