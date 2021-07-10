@@ -1,4 +1,6 @@
 .post-header {
+  width: 100%;
+
   &__heading {
     @include my(0.5rem);
 
@@ -44,7 +46,6 @@
     flex-direction: row;
     justify-content: center;
     @include my(0.5rem);
-    @include py(0.5rem);
   }
   &__author-images {
     display: flex;
@@ -68,5 +69,27 @@
   }
   &__social {
     color: $white;
+  }
+  &__caption {
+    text-align: center;
+    font-size: 0.75rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    @include screen(md) {
+      text-align: center;
+      font-size: 0.875rem;
+    }
+  }
+  &__caption-text {
+    background: var(--bg-color);
+    color: var(--highlight-color);
+    padding: 0.25rem 1rem;
+    border-radius: 1rem;
+    font-size: $text-sm;
+    box-shadow: 0px 0px 4px 1px var(--accent-color);
+
+    @include screen(md) {
+      padding: 0.5rem 2rem;
+    }
   }
 }
