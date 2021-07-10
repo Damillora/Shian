@@ -12,7 +12,7 @@
       text-decoration: underline;
     }
     &--post-header {
-      color: $white;
+      color: var(--text-color);
     }
   }
   &__paywall {

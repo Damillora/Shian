@@ -1,5 +1,5 @@
 .post-list {
-    @include my(2rem);
+    @include my(1rem);
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 1rem;

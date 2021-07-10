@@ -1,9 +1,11 @@
 .post-header {
   width: 100%;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
 
   &__heading {
     @include my(0.5rem);
-
+    
     &--tag {
       display: flex;
       flex-direction: row;
@@ -11,12 +13,12 @@
     }
     &--tag-text {
       margin-right: 0.5rem;
-      color: $white;
     }
     &--tag-color {
       display: inline-block;
       border-radius: 9999px;
       vertical-align: text-bottom;
+      margin-right: 0.5rem;
       height: 4rem;
       width: 4rem;
     }
@@ -37,7 +39,6 @@
     @include my(0.5rem);
   }
   &__title {
-    color: $white;
     @include my(0.5rem);
   }
   &__author-list {
@@ -45,7 +46,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    @include my(0.5rem);
+    @include my(1rem);
   }
   &__author-images {
     display: flex;
@@ -64,9 +65,6 @@
     flex-grow: 1;
     justify-content: center;
   }
-  &__author-name {
-    color: $white;
-  }
   &__social {
     color: $white;
   }
@@ -80,16 +78,45 @@
       font-size: 0.875rem;
     }
   }
-  &__caption-text {
-    background: var(--bg-color);
-    color: var(--highlight-color);
-    padding: 0.25rem 1rem;
-    border-radius: 1rem;
-    font-size: $text-sm;
-    box-shadow: 0px 0px 4px 1px var(--accent-color);
 
-    @include screen(md) {
-      padding: 0.5rem 2rem;
+  &__featured-image {
+    @include my(2rem);
+    @include mx(0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    object-fit: contain;
+    position: relative;
+
+    img {
+      min-width: 100vw;
+      object-fit: cover;
+      height: 50vh;
+      @include screen(md) {
+        height: 70vh;
+      }
+    }
+
+    figcaption {
+      font-size: $text-sm;
+      background: var(--bg-color);
+      color: var(--highlight-color);
+      padding: 0.25rem 1rem;
+      border-radius: 1rem;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      text-align: center;
+      position: absolute;
+      bottom: 1rem;
+      box-shadow: 0px 0px 4px 1px var(--accent-color);
+      @include transition;
+  
+      @include screen(md) {
+        padding: 0.5rem 2rem;
+      }
+    }
+    &:hover figcaption {
+      transform: translateY(100%) translateY(2rem);
     }
   }
 }

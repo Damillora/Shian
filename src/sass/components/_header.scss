@@ -21,10 +21,10 @@
 
     opacity: 0%;
     top: -23vh;
-    &--enabled {
-      opacity: 100%;
-      top: 0;
-    }
+  }
+  &.enabled &__background {
+    opacity: 100%;
+    top: 0;
   }
   &__overlay {
     background-color: rgba(0, 0, 0, 0.5);

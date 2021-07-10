@@ -38,7 +38,7 @@
       }
     }
     &:hover figcaption {
-      transform: translateY(150%);
+      transform: translateY(100%) translateY(2rem);
     }
   }
   .kg-width-wide .kg-image {
@@ -150,10 +150,15 @@
 }
 
 .site-header {
+  
   &.search-enabled {
     height: 100%;
   }
 
+  &.search-enabled &__background {
+    opacity: 100%;
+    top: 0;
+  }
   &.search-enabled &__inner {
     background: rgba(0, 0, 0, 0.5);
   }
